@@ -8,9 +8,9 @@ Sistema de Decisão Estruturada projetado para o uso da Sala de Situação FS\Un
 
 ## Estrutura do Projeto
 ```
-bin/
-data/
-doc/
-lib/
-tests/
+bin/    #Arquivos binários
+data/   #A planilha que o programa lê e escreve deve ficar nesta pasta
+doc/    #Documentação sobre o programa
+lib/    #As classes devem estar nessa pasta
+tests/  #Testes unitários para o programa
 ```
