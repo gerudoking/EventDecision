@@ -1,0 +1,5 @@
+task :default => :testRegister
+
+task :testRegister do
+	ruby "lib/Register.rb"
+end
