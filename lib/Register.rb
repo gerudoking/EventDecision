@@ -33,5 +33,3 @@ class Register
 	end
 end
 
-variavel = Register.new
-variavel.ExecuteRegister()
