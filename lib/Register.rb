@@ -33,3 +33,6 @@ class Register
 	end
 end
 
+teste = Register.new
+teste.ExecuteRegister()
+
