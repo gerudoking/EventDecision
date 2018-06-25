@@ -6,6 +6,12 @@ Sistema de Decisão Estruturada projetado para o uso da Sala de Situação FS\Un
 - Luiz Felipe Carvalho Duarte
 - Gabriel Nazareno Halabi
 
+## Dependências
+Para instalar todas as dependências necessárias para executar o projeto, executa a seguinte linha no terminal:
+```
+gem install spreadsheet state_machine
+```
+
 ## Estrutura do Projeto
 ```
 bin/    #Arquivos binários
