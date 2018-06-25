@@ -9,5 +9,6 @@ class Utilitaries
 		File.rename(src, "Events.xls")
 		File.delete("data/Events.xls")
 		FileUtils.cp("Events.xls", "data")
+		File.delete("Events.xls")
 	end
 end
