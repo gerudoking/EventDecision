@@ -11,7 +11,7 @@ class Decisao
 		@ponderador = 2.4
 		@pontuacao = 0	
 
-		sheet.each do |row|
+		sheet.each 1 do |row|
 			[row[0],row[1],row[2],row[3],row[4]].each do |valor|
 				@pontuacao += (valor.to_i)*@ponderador
 			end
@@ -31,5 +31,5 @@ class Decisao
 
 end
 
-#teste = Decisao.new
-#teste.AnalisarPlanilha()
+teste = Decisao.new
+teste.AnalisarPlanilha()
