@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spreadsheet'
+require_relative 'Utilitaries'
 
 class Decisao
 	def AnalisarPlanilha()
@@ -24,7 +25,8 @@ class Decisao
 			end
 			@pontuacao = 0
 		end
-		planilha.write('data/EventsDecided.xls')
+		planilha.write('EventsDecided.xls')
+		Utilitaries.UpdateEvents('EventsDecided.xls')
 	end
 
 end

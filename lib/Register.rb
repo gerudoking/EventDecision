@@ -30,8 +30,8 @@ class Register
 			new_index = sheet.last_row_index + 1
 			sheet.insert_row(new_index, [nome, imunidade, vigilancia, programa, risco])
 			planilha.write('EventsOutput.xls')
-
 			puts "Arquivo EventsOutput.xls criado. Substitua pelo Events.xls na pasta data."
 		end
+	Utilitaries.UpdateEvents('EventsOutput.xls')
 	end
 end
