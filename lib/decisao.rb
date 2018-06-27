@@ -31,5 +31,5 @@ class Decisao
 
 end
 
-teste = Decisao.new
-teste.AnalisarPlanilha()
+#teste = Decisao.new
+#teste.AnalisarPlanilha()

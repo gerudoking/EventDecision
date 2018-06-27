@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'state_machine'
+require_relative 'Update.rb'
 
 class Estado
 
@@ -20,8 +21,16 @@ class Estado
 	event :retornar do
 		transition any => :base
 		end
+	
+
 	state :update do
-				
+		Update.AtualizarPlanilha()
+		end
+	state :cadastro do
+		Register.ExecuteRegister()		
+		end
+	state :decisao do
+		Decisao.AnalisarPlanilha()
 		end
 	
 	end
