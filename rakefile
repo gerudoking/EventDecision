@@ -1,4 +1,4 @@
-task :default => :testDecisao
+task :default => :testUpdate
 
 task :testRegister do
 	ruby "lib/Register.rb"
@@ -6,4 +6,8 @@ end
 
 task :testDecisao do
 	ruby "lib/decisao.rb"
+end
+
+task :testUpdate do
+	ruby "lib/Update.rb"
 end

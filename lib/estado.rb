@@ -20,6 +20,10 @@ class Estado
 	event :retornar do
 		transition any => :base
 		end
+	state :update do
+				
+		end
+	
 	end
 
 end

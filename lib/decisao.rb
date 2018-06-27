@@ -3,7 +3,7 @@ require 'spreadsheet'
 require_relative 'Utilitaries'
 
 class Decisao
-	def AnalisarPlanilha()
+	def self.AnalisarPlanilha()
 		planilha = Spreadsheet.open('data/Events.xls')
 		sheet = planilha.worksheet 0
 

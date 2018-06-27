@@ -3,7 +3,7 @@ require 'spreadsheet'
 require_relative'Utilitaries'
 
 class Register
-	def ExecuteRegister()
+	def self.ExecuteRegister()
 		Spreadsheet.open 'data/Events.xls' do |planilha|
 			#planilha = Spreadsheet.open('data/Events.xls')
 
