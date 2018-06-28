@@ -11,4 +11,9 @@ class Utilitaries
 		FileUtils.cp("Events.xls", "data")
 		File.delete("Events.xls")
 	end
+
+	# Limpa a tela
+	def self.ScreenClear
+		system('cls') or system('clear')
+	end
 end
