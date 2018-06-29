@@ -12,9 +12,9 @@ class Register
 			puts "Insira o nome do evento"
 			nome = gets.chomp
 			
-			puts "Pontue de 0 a 10 cada valor a seguir"
+			puts "Pontue de 0 a 10 cada valor a seguir(Quão mais próximo de 0 melhor)"
 
-			puts "A quantidade da população que é vacinada(0 corresponde a não existência da vacina)"
+			puts "A quantidade da população que é vacinada(10 corresponde a não existência da vacina)"
 			imunidade = gets.chomp
 
 			puts "A qualidade da vigilância em relação ao evento"
@@ -30,7 +30,6 @@ class Register
 			new_index = sheet.last_row_index + 1
 			sheet.insert_row(new_index, [nome, imunidade, vigilancia, programa, risco])
 			planilha.write('EventsOutput.xls')
-			puts "Arquivo EventsOutput.xls criado. Substitua pelo Events.xls na pasta data."
 		end
 	Utilitaries.UpdateEvents('EventsOutput.xls')
 	end

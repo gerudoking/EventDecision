@@ -28,6 +28,8 @@ class Report
 		puts "Avaliação de Risco: " + whatRow[4]
 		puts "\nTotal de pontos: " + whatRow[5].to_s
 		puts "\nDecisão atual: " + whatRow[6]
+
+		gets.chomp
 	end
 end
 

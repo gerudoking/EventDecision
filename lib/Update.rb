@@ -61,16 +61,16 @@ class Update
 	end
 
 	def self.PercorrerPlanilha(nome,valor_novo,posicao)
-		planilha = Spreadsheet.open('data/Events.xls')
-		sheet = planilha.worksheet 0	
+		Spreadsheet.open 'data/Events.xls' do |planilha|
+			sheet = planilha.worksheet 0	
 
-		sheet.each 1 do |row|
-				if row[0] == nome 
-					row[posicao] = valor_novo			
-				end			
+			sheet.each 1 do |row|
+					if row[0] == nome 
+						row[posicao] = valor_novo			
+					end			
+			end
+			planilha.write('UpdateOutput.xls')
 		end
-		planilha.write('UpdateOutput.xls')
-		Utilitaries.UpdateEvents('UpdateOutput.xls')
 	end
 
 end
