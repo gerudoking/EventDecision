@@ -26,8 +26,8 @@ gem install spreadsheet state_machine
 Abra uma janela de terminal e digite os seguintes comandos:
 ```
 sudo apt-get install ruby-full
-gem update --system
-gem install spreadsheet state_machine
+sudo gem update --system
+sudo gem install spreadsheet state_machine
 ```
 ## Execução do Programa
 Para utilizar o programa, baixe-o e descompacte-o em algum lugar de fácil acesso. Então, abra uma janela de terminal e navegue até entrar na pasta "EventDecision-master". Então, digite o comando
