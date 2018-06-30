@@ -1,7 +1,7 @@
 task :default => :run
 
 task :run do
-	ruby "lib/Main.rb"
+	ruby "lib/main.rb"
 end
 
 task :testRegister do
