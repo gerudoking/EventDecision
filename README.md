@@ -36,11 +36,23 @@ rake
 ```
 e o programa começará.
 
+## Executar testes
+Para executar os testes é necessário ter a gema rspec. Para instalá-la, execute:
+```
+gem install rspec
+```
+
+Entre no diretório do programa e digite no terminal:
+```
+rspec
+```
+E os testes serão executados.
+
 ## Estrutura do Projeto
 ```
 bin/    #Arquivos binários
 data/   #A planilha que o programa lê e escreve deve ficar nesta pasta
 doc/    #Documentação sobre o programa
 lib/    #As classes devem estar nessa pasta
-tests/  #Testes unitários para o programa
+spec/  #Testes unitários para o programa
 ```
