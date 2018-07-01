@@ -54,5 +54,5 @@ bin/    #Arquivos binários
 data/   #A planilha que o programa lê e escreve deve ficar nesta pasta
 doc/    #Documentação sobre o programa
 lib/    #As classes devem estar nessa pasta
-spec/  #Testes unitários para o programa
+spec/   #Testes unitários para o programa
 ```
