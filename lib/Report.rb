@@ -1,7 +1,11 @@
 require 'spreadsheet'
 require_relative 'Utilitaries'
 
+# Conjunto de métodos utilizados para visualizar os resultados da decisão para um evento da planilha.
 class Report
+	# Procura um determinado evento da planilha de nome identificado pelo usuário na forma de texto pelo terminal e apresenta os dados do mesmo.
+	#
+	# @return [Void] Sem retorno.
 	def self.OnVisualize
 		puts "---Visualização de Relatório---"
 		puts "Digite o nome do evento que deseja visualizar o relatório mais recente"
@@ -10,6 +14,10 @@ class Report
 		CallReport(nome)
 	end
 
+	# Procura o evento @nome na planilha e apresenta todos os dados associados no terminal para análise do relatório.
+	#
+	# @param nome [String] Nome do evento a ser procurado.
+	# @return [Void] Sem retorno.
 	def self.CallReport(nome)
 		whatRow = 0
 		planilha = Spreadsheet.open('data/Events.xls')
@@ -32,5 +40,3 @@ class Report
 		gets.chomp
 	end
 end
-
-#Report.OnVisualize

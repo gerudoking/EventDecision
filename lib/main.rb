@@ -32,5 +32,4 @@ while !estado.quit?
 	when "5"
 		estado.quit
 	end
-
 end

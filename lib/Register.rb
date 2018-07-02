@@ -2,11 +2,13 @@ require 'rubygems'
 require 'spreadsheet'
 require_relative'Utilitaries'
 
+# Conjunto de métodos utilizados para adicionar novos eventos à planilha.
 class Register
-	def self.ExecuteRegister()
+	# Adiciona um novo evento à planilha com entradas de dados do usuário na forma de texto pelo terminal.
+	#
+	# @return [Void] Sem retorno.
+	def self.ExecuteRegister
 		Spreadsheet.open 'data/Events.xls' do |planilha|
-			#planilha = Spreadsheet.open('data/Events.xls')
-
 			puts "---Cadastro de Eventos---"
 
 			puts "Insira o nome do evento"
@@ -31,6 +33,6 @@ class Register
 			sheet.insert_row(new_index, [nome, imunidade, vigilancia, programa, risco])
 			planilha.write('EventsOutput.xls')
 		end
-	Utilitaries.UpdateEvents('EventsOutput.xls')
+		Utilitaries.UpdateEvents('EventsOutput.xls')
 	end
 end

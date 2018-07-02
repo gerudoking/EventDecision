@@ -3,8 +3,12 @@ require 'spreadsheet'
 require_relative 'Utilitaries'
 require_relative 'Report'
 
+# Conjunto de métodos utilizados para o calculo da decisão para os eventos presentes na planilha.
 class Decisao
-	def self.AnalisarPlanilha()
+	# Percorre a planilha processando os dados dos eventos e calculando a decisão.
+	#
+	# @return [Void] Sem retorno.
+	def self.AnalisarPlanilha
 		Spreadsheet.open 'data/Events.xls' do |planilha|
 			sheet = planilha.worksheet 0
 
@@ -29,11 +33,7 @@ class Decisao
 			planilha.write('EventsDecided.xls')
 		end
 		Utilitaries.UpdateEvents('EventsDecided.xls')
-		puts "Eventos decididos. Visualizar relatório de evento desejado para ver a decisão"
+		puts "Eventos decididos. Visualizar relatório de evento desejado para ver a decisão."
 		gets.chomp
 	end
-
 end
-
-#teste = Decisao.new
-#teste.AnalisarPlanilha()

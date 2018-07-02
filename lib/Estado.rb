@@ -6,10 +6,9 @@ require_relative 'Register'
 require_relative 'Report'
 require_relative 'Decisao'
 
+# Classe contendo a lógica da máquina de estados que controla a manipulação da planilha de eventos.
 class Estado
-
 	state_machine :state, initial: :base do
-	
 		event :decisao do
 			transition :base => :decisao
 		end
@@ -31,29 +30,27 @@ class Estado
 		
 		before_transition :base => :decisao do |estado|
 			Utilitaries.ScreenClear
-			Decisao.AnalisarPlanilha()
+			Decisao.AnalisarPlanilha
 			Utilitaries.ScreenClear
 		end
 
 		before_transition :base => :update do |estado|
 			Utilitaries.ScreenClear
-			Update.AtualizarPlanilha()
+			Update.AtualizarPlanilha
 			Utilitaries.UpdateEvents('UpdateOutput.xls')
 			Utilitaries.ScreenClear
 		end
 
 		before_transition :base => :cadastro do |estado|
 			Utilitaries.ScreenClear
-			Register.ExecuteRegister()
+			Register.ExecuteRegister
 			Utilitaries.ScreenClear
 		end
 
 		before_transition :base => :visualizar do |estado|
 			Utilitaries.ScreenClear
-			Report.OnVisualize()
+			Report.OnVisualize
 			Utilitaries.ScreenClear
 		end
-	
 	end
-
 end
